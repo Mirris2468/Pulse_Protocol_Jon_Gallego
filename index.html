@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Pulse Peg</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <canvas id="gameCanvas" aria-label="Lienzo principal del juego"></canvas>
+
+      <section id="menuScreen" class="screen screen--active">
+        <h1 class="logo">Pulse Peg</h1>
+        <p class="subtitle">Inspirado en Peggle - mobile first</p>
+
+        <div class="menu-actions">
+          <button id="playBtn" class="btn btn--primary">Iniciar nivel 1</button>
+          <button id="optionsBtn" class="btn btn--secondary">Opciones</button>
+        </div>
+
+        <section id="optionsPanel" class="options-panel options-panel--hidden" aria-label="Opciones de audio">
+          <h2 class="options-title">Opciones</h2>
+
+          <label class="option-row" for="musicVolume">
+            <span class="option-label">Musica</span>
+            <input id="musicVolume" type="range" min="0" max="100" value="60" />
+            <span id="musicVolumeValue" class="option-value">60%</span>
+          </label>
+
+          <label class="option-row" for="sfxVolume">
+            <span class="option-label">Efectos</span>
+            <input id="sfxVolume" type="range" min="0" max="100" value="70" />
+            <span id="sfxVolumeValue" class="option-value">70%</span>
+          </label>
+        </section>
+      </section>
+
+      <section id="hud" class="hud" aria-live="polite">
+        <span id="hudState">Estado: MENU</span>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
